@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel API",
+        "description": "API mô tả tài liệu cho hệ thống Laravel",
+        "contact": {
+            "email": "admin@example.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "api/test": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Lấy thông tin người dùng",
+                "description": "Trả về thông tin cơ bản của người dùng.",
+                "operationId": "ca4596c38870a929c404d637cf5ed9ae",
+                "responses": {
+                    "200": {
+                        "description": "Thông tin người dùng",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "haonp"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "admin@123.com"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Users",
+            "description": "Users"
+        }
+    ]
+}
