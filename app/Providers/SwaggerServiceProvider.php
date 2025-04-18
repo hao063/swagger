@@ -10,7 +10,7 @@ class SwaggerServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->commands([
-            GenerateSwaggerCommand::class,
+            GenerateSwaggerCommand::class
         ]);
     }
 }

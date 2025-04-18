@@ -1,0 +1,69 @@
+{
+    "App\\Http\\Controllers\\TestController@index": {
+        "url": "/api/test/{index2}",
+        "method": "GET",
+        "controller": "App\\Http\\Controllers\\TestController",
+        "action": "index",
+        "headers": [
+            "host",
+            "user-agent",
+            "accept",
+            "accept-language",
+            "accept-charset"
+        ],
+        "path_params": {
+            "index2": "123"
+        },
+        "query_params": {
+            "classId": "123",
+            "keyWork": "hao"
+        },
+        "response": {
+            "name": 123,
+            "email": 123,
+            "classes": [
+                {
+                    "id": 1,
+                    "name": "l\u1edbp 1"
+                }
+            ]
+        }
+    },
+    "App\\Http\\Controllers\\TestController@index2": {
+        "url": "/api/test-2",
+        "method": "GET",
+        "controller": "App\\Http\\Controllers\\TestController",
+        "action": "index2",
+        "headers": [
+            "host",
+            "user-agent",
+            "accept",
+            "accept-language",
+            "accept-charset"
+        ],
+        "path_params": [],
+        "query_params": [],
+        "response": {
+            "phone": "123",
+            "phone2": "123"
+        }
+    },
+    "App\\Http\\Controllers\\TestController@index3": {
+        "url": "/api/test-3",
+        "method": "GET",
+        "controller": "App\\Http\\Controllers\\TestController",
+        "action": "index3",
+        "headers": [
+            "host",
+            "user-agent",
+            "accept",
+            "accept-language",
+            "accept-charset"
+        ],
+        "path_params": [],
+        "query_params": [],
+        "response": {
+            "phone": "123"
+        }
+    }
+}

@@ -13,28 +13,66 @@
         "version": "1.0.0"
     },
     "paths": {
-        "api/test": {
+        "/api/test/{index2}": {
             "get": {
                 "tags": [
-                    "Users"
+                    "Test"
                 ],
-                "summary": "Lấy thông tin người dùng",
-                "description": "Trả về thông tin cơ bản của người dùng.",
-                "operationId": "ca4596c38870a929c404d637cf5ed9ae",
+                "summary": "Swagger App\\Http\\Controllers\\TestController@index",
+                "description": "",
+                "operationId": "50aae5c297df7631e1623b93b708549e",
+                "parameters": [
+                    {
+                        "name": "index2",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "classId",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "keyWork",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": "Thông tin người dùng",
+                        "description": "Return information",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "properties": {
                                         "name": {
-                                            "type": "string",
-                                            "example": "haonp"
+                                            "type": "integer"
                                         },
                                         "email": {
-                                            "type": "string",
-                                            "example": "admin@123.com"
+                                            "type": "integer"
+                                        },
+                                        "classes": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "name": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
                                         }
                                     },
                                     "type": "object"
@@ -42,14 +80,98 @@
                             }
                         }
                     }
-                }
+                },
+                "security": [
+                    {
+                        "host": [],
+                        "user-agent": [],
+                        "accept": [],
+                        "accept-language": [],
+                        "accept-charset": []
+                    }
+                ]
+            }
+        },
+        "/api/test-2": {
+            "get": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "Swagger App\\Http\\Controllers\\TestController@index2",
+                "description": "",
+                "operationId": "ad44ad58379dbfd5c6f6bf312b0e76d1",
+                "responses": {
+                    "200": {
+                        "description": "Return information",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "phone": {
+                                            "type": "string"
+                                        },
+                                        "phone2": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "host": [],
+                        "user-agent": [],
+                        "accept": [],
+                        "accept-language": [],
+                        "accept-charset": []
+                    }
+                ]
+            }
+        },
+        "/api/test-3": {
+            "get": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "Swagger App\\Http\\Controllers\\TestController@index3",
+                "description": "",
+                "operationId": "2dee3ea3e391288902fdfb1e7e7ec4be",
+                "responses": {
+                    "200": {
+                        "description": "Return information",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "phone": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "host": [],
+                        "user-agent": [],
+                        "accept": [],
+                        "accept-language": [],
+                        "accept-charset": []
+                    }
+                ]
             }
         }
     },
     "tags": [
         {
-            "name": "Users",
-            "description": "Users"
+            "name": "Test",
+            "description": "Test"
         }
     ]
 }
